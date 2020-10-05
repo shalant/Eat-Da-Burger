@@ -1,9 +1,7 @@
-<li>
-	{{name}}
+<tr class="table-row">
+	<li>
+		<td class="table-first-col">{{burger_name}}</td>
+		<td><button class="change-devour" data-id="{{id}}">Eat it!</button></td>
 
-	<button class="change-devoured" data-id="{{id}}" data-newsleep="{{devoured}}">
-		{{#if devoured}}DEVOURED!{{else}}WAKE UP!{{/if}}
-	</button>
-
-	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
-</li>
+	</li>
+</tr>
