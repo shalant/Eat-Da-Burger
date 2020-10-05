@@ -2,8 +2,6 @@
 $(function() {
     $(".change-devour").on("click", function(event) {
       var id = $(this).data("id");
-      var newSleep = $(this).data("newsleep");
-  
       var newDevouredState = {
         devoured: 1
         id: id
@@ -27,7 +25,7 @@ $(function() {
       event.preventDefault();
   
       var newBurger = {
-        burger_name: $("#ca").val().trim(),
+        burger_name: $("#newburger").val().trim(),
         devoured: 0,
       };
   
@@ -37,7 +35,7 @@ $(function() {
         data: newBurger
       }).then(
         function() {
-          console.log("created new cat");
+          console.log("created new burger");
           // Reload the page to get the updated list
           location.reload();
         }

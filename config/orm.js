@@ -8,11 +8,9 @@ var connection = require("../config/connection.js");
 // ["?", "?", "?"].toString() => "?,?,?";
 function printQuestionMarks(num) {
   var arr = [];
-
   for (var i = 0; i < num; i++) {
     arr.push("?");
   }
-
   return arr.toString();
 }
 
@@ -50,6 +48,7 @@ var orm = {
       cb(result);
     });
   },
+
   create: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
@@ -66,10 +65,10 @@ var orm = {
       if (err) {
         throw err;
       }
-
       cb(result);
     });
   },
+  
   // An example of objColVals would be {name: panther, sleepy: true}
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
@@ -88,6 +87,7 @@ var orm = {
       cb(result);
     });
   },
+
   delete: function(table, condition, cb) {
     var queryString = "DELETE FROM " + table;
     queryString += " WHERE ";
