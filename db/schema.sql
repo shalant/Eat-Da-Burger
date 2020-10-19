@@ -1,8 +1,8 @@
 
-DROP DATABASE IF EXISTS burgers_db;
-CREATE DATABASE burgers_db;
+DROP DATABASE IF EXISTS so5tlxyy1a2qgpud;
+CREATE DATABASE so5tlxyy1a2qgpud;
 
-USE burgers_db;
+USE so5tlxyy1a2qgpud;
 
 CREATE TABLE songs(
   id INT NOT NULL AUTO_INCREMENT,
